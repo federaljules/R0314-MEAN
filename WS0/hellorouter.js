@@ -3,7 +3,7 @@ var http = require("http");
 http.createServer(function(request, response){
     response.writeHead(200, {'Content-Type': 'text/html'});
     if(request.url === "/"){
-        response.write("<h1>Olet juuressa</h1>")
+        response.write("<h1>Olet juuressa</h1> <p style='color:red;'>TESTING NODEMON</p>")
     }
     else if(request.url === "/home"){
         response.write("<h1>Homepage</h1>")
