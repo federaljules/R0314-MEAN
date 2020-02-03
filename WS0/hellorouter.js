@@ -10,7 +10,10 @@ http.createServer(function(request, response){
     else if(request.url === "/hw"){
         response.write("<h1>Hello World</h1>")
 
-    } else if(request.url === "/table"){
+    } else if(request.url === "/git"){
+        response.write("<h1>Testing Git</h1>")
+
+    }else if(request.url === "/table"){
         response.write(`
         
         <style>
