@@ -1,2 +1,4 @@
 let msg = "Hello World";
-console.log(msg);
+let ex = "!"
+console.log(msg + ex);
+
