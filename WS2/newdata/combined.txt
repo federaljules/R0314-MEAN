@@ -1,0 +1,4 @@
+I wrote this! 
+Hello! This is the content of the first txt file.
+TEXT FILE 2
+I wrote this!
