@@ -5,9 +5,9 @@
     "engines": {
       "node": "12.x"
     },
-    "main": "index.js",
+    "main": "anotherapi.js",
     "scripts": {
-      "start": "node index.js",
+      "start": "node anotherapi.js",
       "test": "node test.js"
     }
   
