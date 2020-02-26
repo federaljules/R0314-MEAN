@@ -9,7 +9,7 @@ var http = require('http');
 // console.log(json)
 // });
 
-
+const PORT = process.env.PORT || 5000;
   var http = require('http');
   http.createServer(function (require, response) {
     response.writeHead(200, {'Content-Type': 'text/html'});
@@ -52,6 +52,6 @@ var http = require('http');
 
   req.end();
 
-}).listen(8081);
+}).listen(PORT);
 
 console.log('Server running at http://127.0.0.1:8081/');
