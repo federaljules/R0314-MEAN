@@ -36,7 +36,18 @@ nav{
     background-color: black;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+        text-align: center;
+}
+
+.navbar-nav li a{
+    display: inline-block;
+    margin: 20px;
+}
+
+.navbar-nav{
+    flex-direction: row;
+    margin: auto;
 }
 
 .navbar-toggler-icon{
@@ -44,44 +55,50 @@ nav{
 }
 
 #main{
-    height: 500px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 20px);
+    height: 100%;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
-    font-family: 'Permanent Marker', cursive;
 
 }
 
 #main2{
-    height: 500px;
-    display: flex;
-    flex-flow: row wrap;
+
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
-    height: calc(100vh - 20px);
+    background-color: rgb(255, 255, 255, 0.5);
+    height: 100% ;
+    padding: 200px;
+    width: 100%;
     -webkit-clip-path: polygon(0 6%, 100% 0, 100% 94%, 0% 100%);
     clip-path: polygon(0 6%, 100% 0, 100% 94%, 0% 100%);
-    font-family: 'Permanent Marker', cursive;
+    
 
 }
 
 
 #main3{
-    height: 500px;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
     align-items: center;
-    background-color: palevioletred;
-    height: calc(100vh - 20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
     -webkit-clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
 clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
 font-family: 'Permanent Marker', cursive;
+padding-top: 10%;
+}
+
+#main3 ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    text-decoration: none;
+    list-style: none;
+    
 }
 
 .container-fluid{
@@ -114,6 +131,8 @@ font-family: 'Permanent Marker', cursive;
     text-align: center;
     color: white;
     font-size: 72pt;
+    padding-top: 200px;
+    padding-bottom: 200px;
     font-family: 'Permanent Marker', cursive;
 }
 
