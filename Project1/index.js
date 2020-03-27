@@ -4,9 +4,8 @@ var bodyParser = require('body-parser')
 var app = express();
 var fs = require('fs');
 
-//const PORT = process.env.PORT || 5000; // Heroku PORT variable
+const PORT = process.env.PORT || 3000; // Heroku PORT variable
 
-const port = 8081;
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -92,4 +91,4 @@ app.post('/ajaxmessage', (req, res) => {
 
 
 
-app.listen(port, () => console.log(`Example app listening on port `+port+`!`))
+app.listen(PORT, () => console.log(`Example app listening on port `+PORT+`!`))
