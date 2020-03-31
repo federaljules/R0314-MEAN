@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%-include("head")-%>
+<title>Ajax message</title>
+</head>
+<body>
+    <%-include("navbar");-%>
+
+<div id="container" class="container-fluid fill">
+    <%-include("main_content");-%>
+
+
+<main id="main2">
+    <h1 style="text-align:center;color: rgb(2, 36, 158);">Add new message via ajax</h1>
+    <form action="/"  method="post">
+      <input class="form-control" type="text" name="username" id="username" placeholder="Username" required><br>
+      <input class="form-control" type="text" name="country" id="country" placeholder="Country" required><br>
+      <textarea class="form-control" style="height:200px;" type="text" name="message" id="message" placeholder="Message" required></textarea><br>
+      <input class="btn btn-primary btn-lg btn-block" type="button" value="Submit" id="btn">
+  </form>
+  </main>
+
+
+</div>
+
+<%- include ("scripts"); -%>
+
+    <script type="text/javascript">
+    
+      let btn = document.getElementById('btn');
+
+
+btn.addEventListener('click', ()=>{
+    let username = document.getElementById('username').value;
+    let country = document.getElementById('country').value;
+    let message = document.getElementById('message').value;
+    if(username != "" && country != "" && message != ""){
+    let obj = {
+        "username": username,
+        "country": country,
+        "date": new Date(),
+        "message": message
+    };
+   // console.log(obj)
+    let jsonStr = JSON.stringify(obj);
+
+    $.ajax({
+        type: "POST",
+        url:"/ajaxmessage",
+        contentType: "application/json",
+        dataType: "json",
+        data: jsonStr,
+        success: function (res) {
+            console.log(res)
+          let container = document.getElementById('container');
+          let viestit = document.createElement('div');
+          let h1 = document.createElement('h1');
+          h1.innerHTML= "Vieraskirjan viestit: "
+          let lista = document.createElement('ul');
+          viestit.setAttribute('id', 'main3');
+          viestit.appendChild(h1);
+          viestit.appendChild(lista);
+
+          container.appendChild(viestit)
+
+          for(let i=0; i<res.length; i++){
+        
+          let li = document.createElement('li');
+          lista.appendChild(li)
+          li.innerHTML = res[i].message;
+            console.log(res[i].message)
+          }
+
+     }
+    });
+  }else{
+    alert("Täytä kaikki tekstikentät!")
+  }
+})
+    
+    </script>
+</body>
+</html>

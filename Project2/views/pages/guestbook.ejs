@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%-include("head")-%>
+<title>Guestbook</title>
+<style>
+    body{
+        background-image: none;
+    }
+</style>
+</head>
+
+  <body>
+    <%-include("navbar");-%>
+
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Country</th>
+        <th scope="col">Message</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for(let i=0; i < data.length; i++){ %>
+        <tr>
+            <td><%= data[i].username %></td>
+            <td><%= data[i].country %></td>
+            <td><%= data[i].message %></td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+</body>
+</html>
+

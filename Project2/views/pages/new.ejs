@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%-include("head")-%>
+<title>New message</title>
+</head>
+<body>
+    
+   <%-include("navbar")-%>
+
+<div class="container-fluid fill">
+    
+    <%-include("main_content");-%>
+
+    <main id="main2">
+      <h1 style="text-align:center;color: rgb(2, 36, 158);">Add new message</h1>
+      <form action="/newmessage"  method="post">
+        <input class="form-control" type="text" name="username" id="username" placeholder="Username" required><br>
+        <input class="form-control" type="text" name="country" id="country" placeholder="Country" required><br>
+        <textarea class="form-control" style="height:200px;" type="text" name="message" id="message" placeholder="Message" required></textarea><br>
+        <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit">
+    </form>
+    </main>
+  </div>
+
+<%-include("scripts")-%>
+</body>
+</html>
