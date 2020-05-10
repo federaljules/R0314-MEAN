@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: white!important;
+}
+
+a:hover{
+    text-decoration: none!important;
+  
+}
+
+a:active{
+    color: greenyellow!important;
+}
+
+
+
+nav{
+    background-color: green;
+    
+}
+
+nav ul{
+ text-decoration: none;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 13px;
+    color: white;
+}
+
+nav ul li:active{
+    color: greenyellow;
+}
+
+.search{
+    width: 70%;
+    display: inline-block;
+    margin: auto auto 20px auto;
+}
+
+
+.kortit{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.kortti{
+    width: 200px;
+    
+    margin-top: 20px;
+}
+
+.korttiStyle{
+    background-color: whitesmoke;
+}
+
+.korttiKuva{
+    width: 20%;
+}
+
+.container{
+    margin: auto;
+    width: 100%;
+}
+
+
+
+.container-muokkaa{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.container-lista{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    height: 93vh;
+    overflow: auto;
+    float: left;
+}
+
+.title{
+    margin-top: 10px;
+}
+
+.bottom{
+    margin: 5px;
+}
+
+.map{
+    width: 100%;
+    height: 500px;
+}
+
+.muokkaaForm{
+    width: 20%;
+    margin: 20px;
+}
+
+.delForm .card{
+    background-color: rgb(250, 173, 173);
+}
+
+.delForm{
+    width: 20%;
+    margin: 20px;
+}
+
+.korttiEdit{
+    width: 400px;
+}
