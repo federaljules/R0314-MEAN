@@ -13,7 +13,7 @@ const Etusivu = () => {
     const [haku, setHaku] = useState('');                                           // Hakukentän tulos
 
     const getAll = async () => {            
-        const response = await fetch("http://localhost:8081/api/getall");           // Hae kaikki tulokset ja aseta ne results muuttujaan setResults avulla
+        const response = await fetch("https://node-api-eumaat.herokuapp.com/api/getall");           // Hae kaikki tulokset ja aseta ne results muuttujaan setResults avulla
         const jsonRes = await response.json();
         setResults(jsonRes);
     };
@@ -22,7 +22,7 @@ const Etusivu = () => {
 
     const getOne = async  (e)  => {
         console.log(haku)
-        const response = await fetch("http://localhost:8081/api/get/" + haku.charAt(0).toUpperCase()+ haku.slice(1));        //Tee haun ensimmäisestä kirjaimesta aina iso kirjan, jotta se vastaa tietokannassa olevaa tietoa
+        const response = await fetch("https://node-api-eumaat.herokuapp.com/api/get/" + haku.charAt(0).toUpperCase()+ haku.slice(1));        //Tee haun ensimmäisestä kirjaimesta aina iso kirjan, jotta se vastaa tietokannassa olevaa tietoa
         const jsonRes = await response.json();              
         console.log(jsonRes)                                                            // Hae tulos hakukentässä annetun maan nimen perusteella ja aseta se results muuttujaan setResults avulla
         if(jsonRes == null){

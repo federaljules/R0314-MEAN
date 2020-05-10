@@ -27,7 +27,7 @@ function Edit() {
                 lippu: lippu
             })
         };
-        fetch("http://localhost:8081/api/update/"+ id , requestOptions);
+        fetch("https://node-api-eumaat.herokuapp.com/api/update/"+ id , requestOptions);
         window.location.reload();
     }
 

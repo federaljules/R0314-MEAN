@@ -26,7 +26,7 @@ function Lisää() {
                 lippu: lippu
             })
         };
-        fetch("http://localhost:8081/api/add", requestOptions);
+        fetch("https://node-api-eumaat.herokuapp.com/api/add", requestOptions);
         window.location.reload();
     }
 

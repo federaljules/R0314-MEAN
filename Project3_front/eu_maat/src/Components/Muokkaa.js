@@ -10,7 +10,7 @@ function Muokkaa() {
 
     useEffect(() => {
         const getAll = async () => {
-        const response = await fetch("http://localhost:8081/api/getall");           //Hae kaikki APIn tulokset ja niiden tiedot listaan, jotta on helppo nähdä mitä haluat muokata 
+        const response = await fetch("https://node-api-eumaat.herokuapp.com/api/getall");           //Hae kaikki APIn tulokset ja niiden tiedot listaan, jotta on helppo nähdä mitä haluat muokata 
         const jsonRes = await response.json();                                      // ja saat ID: tätä kautta
         setResults(jsonRes);
     };

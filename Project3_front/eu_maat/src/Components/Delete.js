@@ -15,7 +15,7 @@ function Delete() {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }                             //Poista tiedot ID:n avulla ja kysy confirm ennen poistoa
             };
-            fetch("http://localhost:8081/api/delete/" + id, requestOptions);
+            fetch("https://node-api-eumaat.herokuapp.com/api/delete/" + id, requestOptions);
             window.location.reload();
         }
         
