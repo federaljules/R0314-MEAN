@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reitit</title>
+
+    <style>
+       .container table{
+            margin:30px;
+            
+            margin: auto;
+            border: solid black 3px;
+        }
+
+        .container{
+            text-align: center;
+            margin-top:100px;
+        }
+
+        .container table td{
+            padding:9px;
+            border: solid black 2px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Tämän API:n reitit</h1>
+    <table>
+
+        <tr>
+          <th>GET</th>
+          <td>/api/getall</td>
+          <td>Return a list of ALL documents in
+            the collection
+            </td>
+         
+        </tr>
+        <tr>
+            <th>GET</th>
+            <td>/api/get/id=*ID here*</td>
+            <td>Return details of the document
+                with id</td>
+           
+          </tr>
+          <tr>
+            <th>POST</th>
+            <td>/api/add</td>
+            <td>Create a new document in
+                the collection</td>
+           
+          </tr>
+          <tr>
+            <th>PUT/PATCH</th>
+            <td>/api/update/id=*ID here*</td>
+            <td>Update the document with id</td>
+
+           
+          </tr>
+          <tr>
+            <th>DELETE</th>
+            <td>/api/delete/id=*ID here*</td>
+            <td>Delete the document with id</td>
+
+          </tr>
+   
+      </table>
+    </div>
+</body>
+</html>
