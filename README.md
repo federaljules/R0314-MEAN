@@ -4,6 +4,8 @@
 
 # Linkki Projekti 1 heroku appiin: https://project1-mean.herokuapp.com/
 
+# Linkki Projekti 2 heroku appiin: https://projekti2-mean.herokuapp.com/
+
 # Linkki Projekti 3 React frontend heroku appiin: https://node-api-eu-react.herokuapp.com/
 # Linkki Projekti 3 REST API heroku appiin: https://node-api-eumaat.herokuapp.com/
 
