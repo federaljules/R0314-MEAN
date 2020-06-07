@@ -27,6 +27,7 @@ function Edit() {
                 lippu: lippu
             })
         };
+        //fetch("https://node-api-eumaat.herokuapp.com/api/update/"+ id , requestOptions);
         fetch("https://node-api-eumaat.herokuapp.com/api/update/"+ id , requestOptions);
         window.location.reload();
     }
@@ -56,8 +57,8 @@ function Edit() {
             <FormControl value={info} onChange={(e) => {setInfo(e.target.value); console.log(info);}}></FormControl>
 
             <FormLabel>Maan kordinaatit</FormLabel>
-            <FormControl type="number" value={lat} placeholder="Latitude" onChange={(e) => {setLat(e.target.value); console.log(lat);}}></FormControl>
-            <FormControl type="number" value={lon} placeholder="Longitude" onChange={(e) => {setLon(e.target.value); console.log(lon);}}></FormControl>
+            <FormControl type="number" step="any" value={lat} placeholder="Latitude" onChange={(e) => {setLat(e.target.value); console.log(lat);}}></FormControl>
+            <FormControl type="number" step="any"  value={lon} placeholder="Longitude" onChange={(e) => {setLon(e.target.value); console.log(lon);}}></FormControl>
             <br/>
 
 {/*Tallenna input kentistä value niiden muuttujiin, jotta saadaan lähetettyä tiedot APIlle --------------------------------------------------------------------------------*/}

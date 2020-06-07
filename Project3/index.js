@@ -47,8 +47,8 @@ app.post('/api/add', (req, res) => {
     let pkaupunki = params.paakaupunki;
     let asluku = params.asluku;
     let lippu  = params.lippu;
-    let coordsLat = params.lat;                                 // Lisää uusi item tietokantaan. Kerää tiedot POST kutsusta req.body avulla, addItem löytyy database.js tiedostosta modulina
-    let coordsLon = params.lon;
+    let coordsLat = params.coords.lat;                                 // Lisää uusi item tietokantaan. Kerää tiedot POST kutsusta req.body avulla, addItem löytyy database.js tiedostosta modulina
+    let coordsLon = params.coords.lon;
     let moreInfo = params.info;
 
     db.connect()
@@ -67,9 +67,11 @@ app.put('/api/update/:id', function (req,res){
     let pkaupunki = params.paakaupunki;
     let asluku = params.asluku;
     let lippu  = params.lippu;                              // Päivitä itemiä tietokannassa ID:n avulla, updateItem löytyy database.js tiedostosta modulina
-    let coordsLat = params.lat;
-    let coordsLon = params.lon;
+    let coordsLat = params.coords.lat;
+    let coordsLon = params.coords.lon;
     let moreInfo = params.info;
+
+    console.log(coordsLat+' '+coordsLon+' ' +maa)
 
     db.updateItem(id,maa, pkaupunki, asluku, lippu, coordsLat, coordsLon, moreInfo,function(result){
 

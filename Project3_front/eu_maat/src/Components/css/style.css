@@ -1,25 +1,20 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
-a{
-    color: white!important;
-}
+
 
 a:hover{
-    text-decoration: none!important;
+    text-decoration: white!important;
   
-}
-
-a:active{
-    color: greenyellow!important;
 }
 
 
 
 nav{
-    background-color: green;
+    background-color: #003399;
     
 }
 
@@ -30,12 +25,21 @@ nav ul{
 nav ul li{
     display: inline-block;
     padding: 13px;
-    color: white;
 }
 
-nav ul li:active{
-    color: greenyellow;
+nav ul li a{
+    color: #FFCC00;
 }
+
+nav ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:active{
+    color: rgb(253, 230, 138);
+
+}
+
 
 .search{
     width: 70%;
